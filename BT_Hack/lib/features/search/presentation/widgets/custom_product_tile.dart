@@ -3,13 +3,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/models/product_model.dart';
-import '../manager/home_bloc.dart';
+import '../manager/search_bloc.dart';
 
-Widget customListTile(Product product,BuildContext context,HomeBloc homeBloc)
+
+Widget customListTile(Product product,BuildContext context,SearchBloc searchBloc)
 {
   return GestureDetector(
     onTap: (){
-      homeBloc.add(HomeProductCardBtnNavigateEvent(product: product));
+      searchBloc.add(SearchProductCardBtnNavigateEvent(product: product));
     },
     child: Container(
       margin:  EdgeInsets.all(MediaQuery.of(context).size.width*0.035),
