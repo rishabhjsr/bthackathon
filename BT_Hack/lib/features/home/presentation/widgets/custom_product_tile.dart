@@ -26,13 +26,16 @@ Widget customListTile(Product product,BuildContext context,HomeBloc homeBloc)
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Container(
-            height: MediaQuery.of(context).size.height*0.30,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              image: DecorationImage(image: NetworkImage(product.image),fit: BoxFit.fitWidth),
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(5),topRight: Radius.circular(5)),
+          Hero(
+            tag: 'product',
+            child: Container(
+              height: MediaQuery.of(context).size.height*0.30,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                image: DecorationImage(image: NetworkImage(product.image),fit: BoxFit.fitWidth),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(5),topRight: Radius.circular(5)),
+              ),
             ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height*0.006),
