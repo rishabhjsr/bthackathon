@@ -85,17 +85,14 @@ class _ProductPageState extends State<ProductPage> {
                 body: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Hero(
-                        tag: 'product',
-                        child: Container(
-                          height: size.height * 0.50,
-                          margin: EdgeInsets.symmetric(
-                              horizontal: size.width * 0.02),
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: NetworkImage(widget.product.image),
-                                fit: BoxFit.contain),
-                          ),
+                      Container(
+                        height: size.height * 0.50,
+                        margin: EdgeInsets.symmetric(
+                            horizontal: size.width * 0.02),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: NetworkImage(widget.product.image),
+                              fit: BoxFit.contain),
                         ),
                       ),
                       Padding(
