@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 body:GridView.builder(itemCount: successState.products.length,itemBuilder: (context,index){
                         return customListTile(successState.products[index],context,homeBloc);
-                      }, gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,crossAxisSpacing:width*0.005,mainAxisSpacing: 10,childAspectRatio: width*0.00145) , ),
+                      }, gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,crossAxisSpacing:width*0.005,mainAxisSpacing: 10,childAspectRatio: width*0.00125) , ),
               );
             case HomeErrorState:
               return const Scaffold(

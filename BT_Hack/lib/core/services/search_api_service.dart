@@ -8,16 +8,13 @@ import '../models/product_model.dart';
 class SearchApiService
 {
 
-
-
-
   // final String adminSecret = '32qR4KmXOIpsGPQKMqEJHGJS27G5s7HdSKO3gdtQd2kv5e852SiYwWNfxkZOBuQ6';
 
   Future<List<Product>> getProduct(String query) async{
     try{
-      final String url = 'https://976a-34-86-183-227.ngrok.io/$query';
+      final String url = 'http://127.0.0.1:8000/$query';
       final response = await http.get(Uri.parse(url));
-      print(response.body);
+      // print(response.body);
       if(response.statusCode==200)
       {
         List<dynamic> jsonResponse=jsonDecode(response.body)['data'];

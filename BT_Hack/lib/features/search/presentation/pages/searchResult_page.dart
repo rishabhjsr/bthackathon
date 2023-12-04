@@ -48,7 +48,7 @@ class _SearchPageState extends State<SearchPage> {
               return Scaffold(
                 appBar: AppBar(
                   backgroundColor: Colors.transparent,
-                  title: Text("Search Results",style: kTitleTextStyle,),
+                  title: Text("Search Results for \"${widget.query}\"",style: kTitleTextStyle,),
                   centerTitle: true,
                   automaticallyImplyLeading: false,
                   actions: const [

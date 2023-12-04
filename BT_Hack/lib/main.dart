@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    Product products=Product(category: "",title: "",id: 0,image: "",price: 0.0,description: "",rating:Rating(rate: 0.0, count: 0) );
+    // changed price to empty string
+    Product products=Product(category: "",title: "",id: 0,image: "",price: "",description: "",rating:Rating(rate: 0.0, count: 0) );
     String query='';
     return MaterialApp(
       title: 'Flutter Demo',

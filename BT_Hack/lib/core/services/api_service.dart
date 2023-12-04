@@ -5,21 +5,27 @@ import 'package:http/http.dart' as http;
 
 import '../models/product_model.dart';
 
+
 class ApiService
 {
-  final String url = 'https://fakestoreapi.com/products';
+  final String url = 'http://127.0.0.1:8000/gaming';
   // final String adminSecret = '32qR4KmXOIpsGPQKMqEJHGJS27G5s7HdSKO3gdtQd2kv5e852SiYwWNfxkZOBuQ6';
 
   Future<List<Product>> getProduct() async{
     try{
       final response = await http.get(Uri.parse(url));
-      print(response.body);
+      // print(response.body);
       if(response.statusCode==200)
       {
-        List<dynamic> jsonResponse=jsonDecode(response.body);
-        // print(jsonResponse);
+        // print(response.body);
+        List<dynamic> jsonResponse=jsonDecode(response.body)['data'];
+        print(jsonResponse);
         print("********************************************");
-        List<Product> products=jsonResponse.map((dynamic item) => Product.fromJson(item)).toList();
+        print(jsonResponse[0].runtimeType);
+        List<Product> products=jsonResponse.map((dynamic item) {
+          // print(item.toString());
+          return Product.fromJson(item);
+        }).toList();
         return products;
       }
       else
