@@ -13,11 +13,11 @@ class ApiService
   Future<List<Product>> getProduct() async{
     try{
       final response = await http.get(Uri.parse(url));
-      print(response.body);
+      //print(response.body);
       if(response.statusCode==200)
       {
         List<dynamic> jsonResponse=jsonDecode(response.body);
-        // print(jsonResponse);
+         print(jsonResponse);
         print("********************************************");
         List<Product> products=jsonResponse.map((dynamic item) => Product.fromJson(item)).toList();
         return products;

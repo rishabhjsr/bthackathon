@@ -15,7 +15,7 @@ class SearchApiService
 
   Future<List<Product>> getProduct(String query) async{
     try{
-      final String url = 'https://976a-34-86-183-227.ngrok.io/$query';
+      final String url = 'https://165b-34-16-130-0.ngrok.io/$query';
       final response = await http.get(Uri.parse(url));
       print(response.body);
       if(response.statusCode==200)

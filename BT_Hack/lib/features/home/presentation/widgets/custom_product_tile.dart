@@ -44,7 +44,7 @@ Widget customListTile(Product product,BuildContext context,HomeBloc homeBloc)
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Expanded(child: Text(product.title,style: const TextStyle(color: Colors.white,overflow: TextOverflow.ellipsis),maxLines: 2,softWrap: true,)),
+                Expanded(child: Text(product.title,style: const TextStyle(color: Colors.white,overflow: TextOverflow.ellipsis),maxLines: 3,softWrap: true,)),
                 Text("\$"+product.price.toString(),style: const TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),maxLines: 1,softWrap: true,)
               ],
             ),
